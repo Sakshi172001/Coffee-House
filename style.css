@@ -1,0 +1,557 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&display=swap");
+* {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    -webkit-transition: all .2s linear;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+html::-webkit-scrollbar {
+    width: 1rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #512a10;
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        -webkit-transform: translateY(-2rem);
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        -webkit-transform: translateY(-2rem);
+        transform: translateY(-2rem);
+        opacity: 0;
+    }
+}
+
+section {
+    padding: 5rem 1rem;
+}
+
+.link-btn {
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+    border: 0.1rem solid #512a10;
+    color: #512a10;
+    background: none;
+    cursor: pointer;
+    font-size: 1.7rem;
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 4.5rem;
+    text-transform: capitalize;
+    color: #222;
+    font-weight: bolder;
+}
+
+.header {
+    z-index: 1000;
+}
+
+.header.active {
+    padding: 2rem 0;
+    background: #512a10;
+}
+
+label.logo {
+    color: white;
+    line-height: 4rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 3.5rem;
+}
+
+nav ul {
+    float: right;
+    margin-right: 3rem;
+    padding-left: 5rem;
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+nav ul li a {
+    border-radius: 3px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-right: 2rem;
+    color: #fff;
+}
+
+a.active,
+a:hover {
+    background: #ffe9e3;
+    transition: .5s;
+    color: brown;
+    text-decoration: underline;
+    text-underline-offset: .5rem;
+    padding: 1rem;
+    font-weight: bold;
+}
+
+.icons {
+    color: white;
+    float: right;
+    line-height: 80px;
+    margin-right: 1rem;
+    cursor: pointer;
+    display: none;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+#check {
+    display: none;
+}
+
+.header #menu-btn {
+    display: none;
+}
+
+.home {
+    background: linear-gradient(rgb(87, 2, 2), rgba(0, 0, 0, 0.7)), url(/images/bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.home span {
+    font-size: 3.5rem;
+    color: #fff;
+}
+
+.home h3 {
+    padding: 1rem 0;
+    font-size: 6.5rem;
+    color: #fff;
+}
+
+.home .link-btn {
+    color: #fff;
+    border-color: #fff;
+}
+
+.link-btn:hover {
+    background: rgb(87, 2, 2);
+    color: #fff;
+    font-weight: bolder;
+}
+
+.about span {
+    font-size: 3rem;
+    color: #512a10;
+    font-weight: bold;
+}
+
+.about .title {
+    padding-top: 1rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+    color: rgb(134, 0, 0);
+    font-weight: bolder;
+}
+
+.about p {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+    line-height: 2;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.menu .menu_title1 {
+    padding-top: 1.5rem;
+    text-transform: capitalize;
+    color: rgb(134, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.menu .menu_title2 {
+    padding-top: 3.5rem;
+    text-transform: capitalize;
+    color: rgb(134, 0, 0);
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 3.5rem;
+    text-transform: capitalize;
+    text-decoration: underline;
+}
+
+.menu {
+    background: #eee;
+}
+
+.menu .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    background: linear-gradient(rgb(87, 2, 2), rgba(0, 0, 0, 0.7));
+    padding: 16px;
+}
+
+.menu .box-container .box {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    background: rgb(255, 224, 204);
+}
+
+.menu .box-container .box:hover {
+    background: #fff;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+}
+
+.menu .box-container .box img {
+    height: 27rem;
+    width: 25rem;
+    margin-bottom: 2rem;
+}
+
+.menu .box-container .box h3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: rgb(107, 0, 0);
+    font-weight: bolder;
+}
+
+.menu .box-container .box p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    line-height: 2;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.gallery .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.gallery .box-container .box {
+    overflow: hidden;
+    position: relative;
+    height: 25rem;
+}
+
+.gallery .box-container .box:hover {
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border: 0.1rem solid #512a10;
+}
+
+.gallery .box-container .box img {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.reviews {
+    background: rgb(167, 42, 42);
+}
+
+.review_heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    font-size: 4.5rem;
+    text-transform: capitalize;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.reviews .box-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(30rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+}
+
+.reviews .box-container .box {
+    text-align: center;
+    padding: 3rem 2rem;
+    border-radius: .5rem;
+    background-color: rgb(255, 204, 184);
+}
+
+.reviews .box-container .box:hover {
+    background: #fff;
+    -webkit-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    -webkit-transform: translateY(-1rem);
+    transform: translateY(-1rem);
+}
+
+.reviews .box-container .box img {
+    height: 10rem;
+    width: 10rem;
+    border-radius: 45%;
+    margin-bottom: 1.5rem;
+}
+
+.reviews .box-container .box h3 {
+    font-size: 2.2rem;
+    text-transform: capitalize;
+    color: #222;
+    font-weight: bolder;
+    padding-top: 1rem;
+}
+
+.reviews .box-container .box p {
+    font-size: 1.5rem;
+    line-height: 2;
+    color: rgb(58, 21, 0);
+    margin-bottom: 0;
+    padding: 1rem 0;
+    font-weight: 800;
+}
+
+.reviews .box-container .box .stars {
+    margin-top: 1rem;
+}
+
+.reviews .box-container .box .stars i {
+    font-size: 1.7rem;
+    color: #512a10;
+}
+
+.contact .contact-info-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+    background-color: brown;
+}
+
+.contact .contact-info-container .box {
+    border: 0.2rem solid whitesmoke;
+    padding: 3rem 2rem;
+    border: 0.2rem solid whitesmoke;
+    text-align: center;
+}
+
+.contact .contact-info-container .box:hover i {
+    background: whitesmoke;
+    color: brown;
+}
+
+.contact .contact-info-container .box i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    border: 0.1rem solid #f5ebe4;
+    color: #ebd9cd;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.contact .contact-info-container .box h3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: whitesmoke;
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+.contact .contact-info-container .box p {
+    font-size: 2rem;
+    line-height: 2;
+    color: rgb(255, 255, 255);
+    margin-bottom: 0;
+    font-weight: bold;
+}
+
+.contact form h3 {
+    font-size: 3rem;
+    text-transform: capitalize;
+    color: rgb(0, 0, 0);
+    padding-bottom: 1rem;
+    font-weight: bold;
+}
+
+.contact form .box {
+    margin: .7rem 0;
+    border: 0.1rem solid brown;
+    font-size: 1.6rem;
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+}
+
+.contact form .box:focus {
+    background: brown;
+    color: #fff;
+}
+
+.contact form .box:focus::-webkit-input-placeholder {
+    color: #eee;
+}
+
+.contact form .box:focus:-ms-input-placeholder {
+    color: #eee;
+}
+
+.contact form .box:focus::-ms-input-placeholder {
+    color: #eee;
+}
+
+.contact form .box:focus::placeholder {
+    color: #eee;
+}
+
+.contact form textarea {
+    height: 15rem;
+    resize: none;
+}
+
+.footer {
+    text-align: center;
+    background-color: brown;
+}
+
+.footer .logo {
+    font-size: 3rem;
+    color: whitesmoke;
+    font-weight: bolder;
+}
+
+.footer p {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    color: rgb(250, 243, 243);
+    padding-top: 2rem;
+}
+
+.footer a {
+    font-size: 2.5rem;
+    color: rgb(250, 243, 243);
+}
+
+.footer .foot_email {
+    font-size: 1.5rem;
+    color: rgb(250, 243, 243);
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 4rem;
+    font-size: 2rem;
+    border: 0.1rem solid brown;
+    color: #f7e6da;
+}
+
+.footer .share a:hover {
+    background: white;
+    color: brown;
+}
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+        scroll-padding-top: 8rem;
+    }
+    .home h3 {
+        font-size: 4rem;
+    }
+    section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-form form {
+        padding: 3rem 2rem;
+    }
+    .login-form form h3 {
+        font-size: 1.7rem;
+    }
+    .header {
+        padding: 4rem 2rem;
+    }
+    .header.active {
+        padding: 2rem;
+    }
+    .header #menu-btn {
+        display: block;
+    }
+    .header .nav {
+        position: absolute;
+        top: 99%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+        flex-flow: column;
+        padding: 1rem 0;
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    .header .nav.active {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .header .nav a {
+        margin: 1rem 2rem;
+        color: #222;
+    }
+    .contact .map {
+        height: 25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}
